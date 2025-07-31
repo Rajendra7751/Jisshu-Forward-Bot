@@ -8,8 +8,7 @@ from config import Config
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from pyrogram.enums import ParseMode
-from pyrogram.errors import FloodWait
-from web import app  # Flask web server
+from pyrogram.errors import FloodWait  # Flask web server
 
 # Setup logging
 logging.config.fileConfig('logging.conf')
