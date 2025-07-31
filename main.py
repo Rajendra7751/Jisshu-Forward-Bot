@@ -1,8 +1,15 @@
 # bot developer @mr_jisshu
 import os
 import threading
-from web import app as flask_app
+from flask import Flask
 from bot import Bot
+
+# Create Flask app directly here
+flask_app = Flask(__name__)
+
+@flask_app.route('/')
+def home():
+    return "Bot is running!"
 
 # Run Flask server in background (for Render)
 def run_flask():
